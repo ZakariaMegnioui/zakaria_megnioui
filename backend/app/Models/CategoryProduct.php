@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class CategoryProduct extends Pivot
 {
     use HasFactory;
+    public const TABLE_NAME = 'category_student';
     public const PRIMARY_KEY_COLUMN = 'id';
     public const PRODUCT_ID_COLUMN = 'product_id';
     public const CATEGORY_ID_COLUMN = 'category_id';
