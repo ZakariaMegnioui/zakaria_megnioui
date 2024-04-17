@@ -3,10 +3,12 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Product extends Model
 {
+    use HasFactory;
     public const TABLE_NAME = 'products';
     public const PRIMARY_KEY_COLUMN = 'id';
     public const NAME_COLUMN = 'name';
@@ -18,6 +20,7 @@ class Product extends Model
     /**
      * Getters
      */
+    
     public function getName(): string
     {
         return $this->getAttribute(self::NAME_COLUMN);
